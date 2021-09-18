@@ -1,5 +1,5 @@
 var sound = new Howl ({
-    src=['.Proyecto/js/WhatsApp.mp3']
+    src:['js/WhatsApp.mp3']
 });
 
 var btnPlay = document.getElementById("btnPlay");
