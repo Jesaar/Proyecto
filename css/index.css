@@ -1,0 +1,41 @@
+.slider{
+    width:95%;
+    margin:auto;
+    overflow:hidden;
+}
+.slider ul{
+    display:flex;
+    padding:0;        
+    animation:cambio 5s infinite;
+}
+.slider li{
+    width: 100%;
+    list-style:none;
+}
+
+@keyframes cambio {
+    0% {margin-left:10%;}
+    20% {margin-left:20%;}
+
+    40% {margin-left:-100%}
+    60% {margin-left:-100%}
+
+
+    80% {margin-left:-100%}
+    100% {margin-left:-100%}
+}
+h1{
+    margin-top:2em;
+    font-family: 'Rampart One', cursive;
+}
+.fixed {
+    position:fixed;
+    top:0;
+    right:0;
+    width:100;
+}
+.imagen_1{
+
+    width: 100%;
+
+}

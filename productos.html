@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="css/productos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Rampart+One&display=swap" rel="stylesheet">
+  
+    <style>
+    * {padding: 5px;
+        margin: 6px;
+    }
+    #header{
+        margin:auto;
+        width:800px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+     ul, ol {
+         list-style:none;
+     }
+     .nav li a {
+         background-color:rgb(240, 74, 13) ;
+         color:cornsilk;
+         text-decoration:none ;
+         padding: 10px;
+         display: block;
+     }
+     .nav li a:hover{
+         background-color: darkgoldenrod;
+     }
+     .nav > li{
+         float:left;
+     }
+     .nav li ul{
+         display: none;
+         position:absolute;
+
+     }
+     .nav li:hover > ul{
+         display: block;
+
+     }
+    </style>
+   
+
+</head>
+<body background="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fHN3ZWV0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+  
+    <a href="index.html">Página Principal </a>
+  <div id="header">
+        <ul class="nav">
+            <li><a href="">Pastelería</a><ul>
+                <li><a href="">Panes</a></li>
+                <li><a href="">Tostadas</a></li>
+                <li><a href="">Buñuelos</a></li>
+                <li><a href="">Pandebono</a></li>
+            </ul></li>
+            <li><a href="">Restaurante</a><ul>
+                <li><a href="">Almuerzo ejecutivo</a></li>
+                <li><a href="">A la Carta</a></li>
+                <li><a href="">Desayuno</a></li>
+                <li><a href="">Bebidas</a></li>
+            </ul></li>
+            <li><a href="">Repostería</a><ul>
+                <li><a href="">Tortas</a></li>
+                <li><a href="">Tartas dulces</a></li>
+                <li><a href="">Postres</a></li>
+                <li><a href="">Mil hojas</a></li>
+                <li><a href="">Merengue</a></li>
+            </ul></li>
+            <li><a href="">Plan de alimentación limpia</a><ul>
+                <li><a href="">Proteínas</a></li>
+                <li><a href="">Eliminador de grasa</a></li>
+                <li><a href="">Batidos digestivos</a></li>
+            </ul></li>
+            <li><a href="">Acerca de</a><ul>
+                <li><a href="">Contactos</a></li>
+                <li><a href="">Reservas</a></li>
+                
+            </ul></li>
+        </ul>
+    </div>
+
+    <button id="btnPlay">Reproduzca un sonido</button>
+    <button id="btnPause">Detenga el audio</button>
+
+
+    <script src="./js/howler.min.js"></script>
+   <script src="./js/productos.js"></script>
+</body>
+  
+</html>
