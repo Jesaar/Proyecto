@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    
+
+</head>
+<body>
+    <h1>Login</h1>
+    <div class="d-inline-block p-3 mb-2 bg-success text-white">
+    <form >
+        <label  for="nombre ">Ingrese su nombre :</label>
+        <div class="row g-3">
+        <div class="col-sm-10"> <input class="form-control" 
+        type="text" placeholder="Escribe tu nombre " name="nombre" id="nombre"></div>
+        <label  for="apellidos ">Ingrese sus apellidos:</label>
+        <div class="col-sm-10"> <input class="form-control" 
+        type="text" placeholder="Escribe tus apellidos " name="apellidos" id="apellidos"></div>
+        </div><br>
+      <lebel >Género:</lebel><br>
+        <input class="form-check-input" type="radio" name="Género" id="Género">Hombre
+        <input class="form-check-input"  type="radio" name="Género" id="Género" >Mujer
+        <input class="form-check-input" type="radio" name="Género" id="Género">Trans<br>
+        <br>
+        <div class="mb-3">
+        <label>Email</label><br>
+        <input class="form-control"  type="email=" placeholder="nombre@example.com" ><br>
+        <label>Contraseña</label></div><br>
+        <input class="form-control"  type="password" placeholder="La contraseña debe contener como mínimo 10 caracteres"><br>
+         <label>Confirme su contraseña</label><br>
+        <input class="form-control"  type="password" placeholder="Las contraseñas deben coincidir" ><br>
+        <div class="col-auto">
+            <button type="submit"  class="btn btn-primary mb-3">Confirme su identidad</button>
+        </div>
+        <label>Edad</label><br>
+        
+        <input class="form-control" type="number" value="21"><br>
+        <label>Idiomas que domina:</label><br>
+         <input class="form-check-input" type="checkbox"> Inglés<br>
+         <input class="form-check-input" type="checkbox"> Español<br>
+         <input class="form-check-input"  type="checkbox"> Alemán<br>
+         <input class="form-check-input" type="checkbox" name="diferente"> Otros<br>
+         
+      <label>País</label>
+      <select class="form-control" name="" id="">
+        <option value="">Colombia</option>
+         <option value="">Estados Unidos</option>
+         <option value="">Argentina</option>
+         <option value="">Francia</option>
+         <option value="">México</option><br>
+      </select><br>
+      <br>
+      <label>Departamento</label>
+      <select class="form-control" name="" id="">
+        <option value="">Cundinamarca</option>
+         <option value="">Valle del Cauca</option>
+         <option value="">Nariño</option>
+         <option value="">Antioquia</option>
+         <option value="">Amazonas</option><br>
+      </select><br><br>
+      <label>Ciudad</label>
+      <select class="form-control" name="" id="">
+        <option value="">Medellín</option>
+         <option value="">Cali</option>
+         <option value="">Bogotá</option>
+         <option value="">Leticia</option>
+         <option value="">Pasto</option><br>
+      </select><br><br>
+        <label>Fecha de nacimiento</label><br>
+        <input class="form-control" type="date-local" ><br>
+      <label>Color favorito</label>
+      <div class="row mb-3">
+          <div class="col-sm-10">
+      <input class="form-control form-control-sm" type="color"></div></div><br>
+      <br>
+      <label>Archivo</label>
+      <input type="file">
+      <br>
+      <br>
+      <textarea name="" id="" cols="30" rows="10"></textarea><br>
+      <input  type="submit">
+      
+      <input type="reset"><br>
+      <br>
+      <button type="button" class="btn btn-info">Login in</button>
+    </form>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script></div>
+</body>
+</html>
