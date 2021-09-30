@@ -9,117 +9,75 @@
     rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
     crossorigin="anonymous">
-
-    <script type="text/javascript">
-      function validar(){
-        var form=document.form;
-        
-        if(form.nombre.value==0){
-          alert("el campo nombre está vacío");
-          form.nombre.value="";
-          form.nombre.focus();
-          return false;
-        }
-        if(form.apellidos.value==0){
-          alert("el campo apellidos está vacío");
-          form.apellidos.value="";
-          form.apellidos.focus();
-          return false;
-        }
-        if(form.Email.value==0){
-          alert("el campo email está vacío");
-          form.Email.value="";
-          form.Email.focus();
-          return false;
-        }
-        if(form.password.value==0){
-          alert("el campo contraseña está vacío");
-          form.password.value="";
-          form.password.focus();
-          return false;
-        }
-        if(form.password2.value==0){
-          alert("el campo comprobación de contraseña está vacío");
-          form.password2.value="";
-          form.password2.focus();
-          return false;
-        }
-        if(form.fecha.value==0){
-          alert("el campo fecha no puede estar vacío");
-          form.fecha.value="";
-          form.fecha.focus();
-          return false;
-        }
-        if(form.edad.value==0){
-          alert("la edad es obligatoria");
-          form.edad.value="";
-          form.edad.focus();
-          return false;
-        }
-        if(form.color.value==0){
-          alert("por favor debe escoger un color");
-          form.color.value="";
-          form.color.focus();
-          return false;
-        }
-        
-      }
-    </script>
+    
 
 </head>
 <body>
-    <h1>Login</h1>
+    <h1>Login</h1><br>
+    
     <div class="d-inline-block p-3 mb-2 bg-success text-white">
-    <form name="form" action="#" method="POST" onsubmit="return validar();">
+    <form id="form" novalidate method="POST">
+      <div class="form-group">
         <label  for="nombre ">Ingrese su nombre :</label>
         <div class="row g-3">
         <div class="col-sm-10"> <input class="form-control" 
-        type="text" placeholder="Escribe tu nombre " name="nombre" id="nombre"></div>
+        type="text" placeholder="Escribe tu nombre " required
+         data-pristine-required-message="Este campo es obligatorio"></div>
+      
+      
         <label  for="apellidos ">Ingrese sus apellidos:</label>
         <div class="col-sm-10"> <input class="form-control" 
-        type="text" placeholder="Escribe tus apellidos " name="apellidos" id="apellidos"></div>
-        </div><br>
+        type="text" placeholder="Escribe tus apellidos "  data-pristine-required-message="Este campo es obligatorio" required></div>
+        </div>
+      </div><br>
+      <div class="form-group">
       <lebel >Género:</lebel><br>
-        <input class="form-check-input" type="radio" name="Género" id="Género">Hombre
+        <input class="form-check-input" type="radio" name="Género" id="Género" >Hombre
         <input class="form-check-input"  type="radio" name="Género" id="Género" >Mujer
-        <input class="form-check-input" type="radio" name="Género" id="Género">Trans<br>
+        <input class="form-check-input" type="radio" name="Género" id="Género">Trans </div><br>
         <br>
+        <div class="form-group">
         <div class="mb-3">
         <label>Email</label><br>
-        <input class="form-control"  type="email=" placeholder="nombre@example.com" name="Email" id="Email"><br>
+        <input class="form-control"  type="email=" placeholder="nombre@example.com" data-pristine-required-message="Este campo es obligatorio" required data-pristine-email-message="Este correo no es valido" ></div><br>
+        <div class="form-group">
         <label>Contraseña</label></div><br>
-        <input class="form-control"  type="password" placeholder="La contraseña debe contener como mínimo 10 caracteres" name="password" id="password"><br>
-         <label>Confirme su contraseña</label><br>
-        <input class="form-control"  type="password" placeholder="Las contraseñas deben coincidir"name="password2" id="password2" ><br>
+        <input class="form-control"  type="password" placeholder="La contraseña debe contener como mínimo 10 caracteres" minlength="10" data-pristine-required-message="Este campo es obligatorio" required><br>
+         <label>Confirme su contraseña</label></div><br>
+         <div class="form-group">
+        <input class="form-control"  type="password" placeholder="Las contraseñas deben coincidir" data-pristine-required-message="Este campo es obligatorio" required></div><br>
         <div class="col-auto">
-            <button type="submit"  class="btn btn-primary mb-3">Confirme su identidad</button>
+            <button type="submit"  class="btn btn-primary mb-3">Confirme su identidad </button>
         </div>
+        <div class="form-group">
         <label>Edad</label><br>
-        
-        <input class="form-control" type="number" name="edad" id="edad"><br>
+        <input class="form-control" type="number" data-pristine-required-message="Este campo es obligatorio" required></div><br>
+        <div class="form-group">
         <label>Idiomas que domina:</label><br>
-         <input class="form-check-input" type="checkbox"> Inglés<br>
-         <input class="form-check-input" type="checkbox"> Español<br>
-         <input class="form-check-input"  type="checkbox"> Alemán<br>
-         <input class="form-check-input" type="checkbox" name="diferente"> Otros<br>
-         
+         <input class="form-check-input" type="checkbox" > Inglés<br>
+         <input class="form-check-input" type="checkbox" > Español<br>
+         <input class="form-check-input"  type="checkbox" > Alemán<br>
+         <input class="form-check-input" type="checkbox" name="diferente" > Otros</div><br>
+         <div class="form-group">
       <label>País</label>
-      <select class="form-control" name="" id="">
+      <select class="form-control" name="" id="" >
         <option value="">Colombia</option>
          <option value="">Estados Unidos</option>
          <option value="">Argentina</option>
          <option value="">Francia</option>
          <option value="">México</option><br>
-      </select><br>
+      </select></div><br>
       <br>
+      <div class="form-group">
       <label>Departamento</label>
-      <select class="form-control" name="" id="">
+      <select class="form-control" name="" id="" >
         <option value="">Cundinamarca</option>
          <option value="">Valle del Cauca</option>
          <option value="">Nariño</option>
          <option value="">Antioquia</option>
          <option value="">Amazonas</option><br>
-      </select><br><br>
+      </select></div><br><br>
+      <div class="form-group">
       <label>Ciudad</label>
       <select class="form-control" name="" id="">
         <option value="">Medellín</option>
@@ -127,29 +85,37 @@
          <option value="">Bogotá</option>
          <option value="">Leticia</option>
          <option value="">Pasto</option><br>
-      </select><br><br>
+      </select></div><br><br>
+      <div class="form-group">
         <label>Fecha de nacimiento</label><br>
-        <input class="form-control" type="date-local" name="fecha" id="fecha" ><br>
+        <input class="form-control" type="date-local" name="fecha" id="fecha" required></div><br>
+      <div class="form-group">
       <label>Color favorito</label>
       <div class="row mb-3">
           <div class="col-sm-10">
-      <input class="form-control form-control-sm" type="color" name="color" id="color"></div></div><br>
+      <input class="form-control form-control-sm" type="color" required></div></div></div><br>
       <br>
+      <div class="form-group">
       <label>Archivo</label>
-      <input type="file">
+      <input type="file" ></div>
       <br>
       <br>
-      <textarea name="" id="" cols="30" rows="10"></textarea><br>
-      <input  type="submit">
       
-      <input type="reset"><br>
+      <textarea name="" id="" cols="30" rows="10"></textarea><br>
+      <div class=form-group>
+      <input  type="submit" value="Enviar" class="btn" required></div>
+      <div class="form-group">
+      <input type="reset" value="Limpiar" class="btn" ></div><br>
       <br>
-      <button onclick="validar();">Login in</button>
+      </div>
+      <button id="aspectoBtn">Cambiar aspecto</button>
     </form>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
     crossorigin="anonymous"></script></div>
+    <script src="js/pristine.min.js"></script>
+    <script src="js/formulario.js"></script>
 
     <a href="productos.html">Volver al menú </a>
 </body>
